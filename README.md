@@ -14,10 +14,10 @@ Dự án mô phỏng hệ thống quản lý hàng chờ bán vé xem phim tại
 ## 👥 Danh sách Thành viên Nhóm
 | STT | Họ và Tên | MSSV | Vai trò | Nhánh GitHub (Branch) |
 |---|---|---|---|---|
-| 1 | Nguyễn Minh Tân | *[Nhập MSSV]* | Trưởng nhóm / Architect | `main` |
-| 2 | *[Tên Thành viên 2]* | *[Nhập MSSV]* | C++ Core Developer | `nhanh-tv2-core` |
-| 3 | *[Tên Thành viên 3]* | *[Nhập MSSV]* | Business Logic & File I/O | `nhanh-tv3-logic` |
-| 4 | *[Tên Thành viên 4]* | *[Nhập MSSV]* | UI Console & Test | `nhanh-tv4-ui` |
+| 1 | Nguyễn Minh Tân | 6651060055 | Trưởng nhóm / Architect | `main` |
+| 2 | Phạm Lê Ngọc Tài | 6651060053  | C++ Core Developer | `nhanh-tv2-core` |
+| 3 | Lê Nguyễn Huỳnh Phúc | 6651060045  | Business Logic & File I/O | `nhanh-tv3-logic` |
+| 4 | Thái Lê Hữu Tài | 6651060054 | UI Console & Test | `nhanh-tv4-ui` |
 
 ---
 
