@@ -18,6 +18,8 @@ Dự án mô phỏng hệ thống quản lý hàng chờ bán vé xem phim tại
 | 2 | Phạm Lê Ngọc Tài | 6651060053  | C++ Core Developer | `nhanh-tv2-core` |
 | 3 | Lê Nguyễn Huỳnh Phúc | 6651060045  | Business Logic & File I/O | `nhanh-tv3-logic` |
 | 4 | Thái Lê Hữu Tài | 6651060054 | UI Console & Test | `nhanh-tv4-ui` |
+| 5 | Lê Phúc Trường | 6651060054 | Word | `nhanh-tv4-ui` |
+
 
 ---
 
