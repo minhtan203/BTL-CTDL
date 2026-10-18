@@ -2,7 +2,7 @@
 
 > **Bài tập lớn môn Cấu trúc Dữ liệu & Giải thuật - Đề tài 19**  
 > **Trường:** Đại học Giao thông Vận tải Phân hiệu tại TP. Hồ Chí Minh (UTC2)  
-> **Khoa:** Công nghệ Thông tin | **Bộ môn:** Tin học  
+> **Khoa:** Điện - Điện tử | **Bộ môn:** Cấu trúc dữ liệu giải thuật 
 
 ---
 
