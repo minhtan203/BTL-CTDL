@@ -22,11 +22,11 @@
 
 ### 1. Quản lý Hàng chờ bằng Deque Danh sách liên kết đôi (DLL)
 * **Khách thường (`CUS_NORMAL`):** Xếp hàng vào **CUỐI** hàng đợi $\rightarrow$ Thao tác `push_back`.
-* **Khách ưu tiên (`CUS_PRIORITY`):** Được chen lên **ĐẦU** hàng đợi $\rightarrow$ Thao tác `push_front`[cite: 10, 13].
-* **Yêu cầu hoàn vé (`CUS_REFUND`):** Khi hủy vé, hệ thống tạo một yêu cầu hoàn và đẩy thẳng lên **ĐẦU** hàng chờ $\rightarrow$ Thao tác `push_front` để giải phóng ghế sớm nhất[cite: 10, 13].
-* **Phục vụ khách kế tiếp:** Lấy khách ở **ĐẦU** hàng $\rightarrow$ Thao tác `pop_front`[cite: 10, 13].
-* **Khách cuối hàng bỏ về:** Gỡ phần tử ở **CUỐI** hàng $\rightarrow$ Thao tác `pop_back`[cite: 10, 13].
-* **Xóa khách bất kỳ theo ID:** Tìm và nối con trỏ `prev`/`next` gỡ nút trong $O(1)$ sau khi tìm thấy $\rightarrow$ Thao tác `removeById`[cite: 10, 13].
+* **Khách ưu tiên (`CUS_PRIORITY`):** Được chen lên **ĐẦU** hàng đợi $\rightarrow$ Thao tác `push_front`.
+* **Yêu cầu hoàn vé (`CUS_REFUND`):** Khi hủy vé, hệ thống tạo một yêu cầu hoàn và đẩy thẳng lên **ĐẦU** hàng chờ $\rightarrow$ Thao tác `push_front` để giải phóng ghế sớm nhất.
+* **Phục vụ khách kế tiếp:** Lấy khách ở **ĐẦU** hàng $\rightarrow$ Thao tác `pop_front`.
+* **Khách cuối hàng bỏ về:** Gỡ phần tử ở **CUỐI** hàng $\rightarrow$ Thao tác `pop_back`.
+* **Xóa khách bất kỳ theo ID:** Tìm và nối con trỏ `prev`/`next` gỡ nút trong $O(1)$ sau khi tìm thấy $\rightarrow$ Thao tác `removeById`.
 
 ### 2. Sơ đồ Phòng chiếu & Thuật toán Gợi ý Chỗ ngồi Tối ưu
 * **Sơ đồ phòng chiếu:** Ma trận 8 hàng $\times$ 10 cột = 80 ghế[cite: 10, 13].
@@ -43,7 +43,7 @@ $$\text{Score} = \vert{}r - midRow\vert{} \times 100 + \vert{}start + (n - 1)/2.
 ```text
 BTL-CTDL/
 ├── Code_CPP/
-│   └── main.cpp                   # toàn bộ mã nguồn C++ (794 dòng) chạy Console
+│   └── main.cpp                   # Toàn bộ mã nguồn C++ (794 dòng) chạy Console
 ├── Web_App/
 │   ├── index.html                 # Giao diện Web mô phỏng phòng vé
 │   ├── app.js                     # Cấu trúc Deque & Nghiệp vụ viết bằng JavaScript
