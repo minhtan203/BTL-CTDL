@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đặt vé xem phim & Hàng chờ khách hàng</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Đặt vé xem phim & Hàng chờ khách hàng</h1>
+  <p>Đề 19 – Hàng chờ là Deque tự cài đặt bằng danh sách liên kết đôi. Phim demo, suất 19:30, Phòng 01.</p>
+</header>
+
+<main>
+  <!-- ===== HÀNG CHỜ ===== -->
+  <section class="card" id="queue-card">
+    <h2>Hàng chờ khách hàng <span id="qsize" class="pill"></span></h2>
+    <div id="viz" class="viz" aria-live="polite"></div>
+    <div class="row">
+      <button id="btn-serve" class="primary">Phục vụ khách kế tiếp <small>pop_front</small></button>
+      <button id="btn-popback">Khách cuối bỏ về <small>pop_back</small></button>
+      <input id="rm-id" type="number" min="1" placeholder="ID khách" style="width:100px">
+      <button id="btn-rm">Xóa theo ID</button>
+    </div>
+    <form id="add-form" class="row sep">
+      <input id="f-name" placeholder="Họ tên" required>
+      <input id="f-phone" placeholder="Số điện thoại" required>
+      <select id="f-type">
+        <option value="normal">Vé thường → cuối hàng (push_back)</option>
+        <option value="priority">Vé ưu tiên → đầu hàng (push_front)</option>
+      </select>
+      <input id="f-n" type="number" min="1" max="8" value="2" title="Số ghế" style="width:70px">
+      <select id="f-vip"><option value="0">Ghế thường</option><option value="1">Ghế VIP</option></select>
+      <button class="primary" type="submit">Thêm vào hàng chờ</button>
+    </form>
+  </section>
+
+  <!-- ===== SƠ ĐỒ GHẾ ===== -->
+  <section class="card" id="seat-card">
+    <h2>Sơ đồ phòng chiếu</h2>
+    <div id="banner" class="banner"></div>
+    <div class="legend">
+      <span><i class="seat"></i>Thường</span><span><i class="seat vip"></i>VIP</span>
+      <span><i class="seat booked"></i>Đã đặt</span><span><i class="seat pick"></i>Gợi ý / đang chọn</span>
+    </div>
+    <div class="screen">MÀN HÌNH</div>
+    <div id="map" class="map"></div>
+    <div id="book-ctl" class="row sep" hidden>
+      <select id="pay"><option>Tiền mặt</option><option>Thẻ / Chuyển khoản</option></select>
+      <button id="btn-accept">Dùng gợi ý</button>
+      <button id="btn-pay" class="primary">Xác nhận thanh toán</button>
+      <button id="btn-skip" class="danger">Khách bỏ đi</button>
+    </div>
+    <div id="idle-ctl" class="row sep">
+      <span>Gợi ý chỗ trống:</span>
+      <input id="h-n" type="number" min="1" max="8" value="3" style="width:70px">
+      <select id="h-vip"><option value="0">Thường</option><option value="1">VIP</option></select>
+      <button id="btn-hint">Gợi ý</button>
+    </div>
+  </section>
+
+  <!-- ===== VÉ ===== -->
+  <section class="card" id="ticket-card">
+    <h2>Vé đã xuất</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Mã</th><th>Khách</th><th>Ghế</th><th>Tổng</th><th>Trạng thái</th><th></th></tr></thead>
+      <tbody id="tickets"></tbody>
+    </table></div>
+    <p class="note">Hủy vé sẽ đẩy yêu cầu hoàn vé lên đầu hàng chờ (push_front). Khi phục vụ, ghế được trả lại và hoàn 80% tiền.</p>
+  </section>
+</main>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
